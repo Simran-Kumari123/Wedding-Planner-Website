@@ -1,0 +1,96 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #fff8f0;
+  color: #333;
+  margin: 0;
+  padding: 20px;
+}
+
+.App {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  animation: fadeIn 1s ease-in-out;
+}
+
+h1 {
+  text-align: center;
+  color: #d2691e;
+  font-family: 'Brush Script MT', cursive;
+  margin-bottom: 30px;
+  animation: slideDown 1s ease forwards;
+}
+
+h2 {
+  color: #a0522d;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #d2691e;
+  padding-bottom: 5px;
+  animation: fadeIn 1.5s ease forwards;
+}
+
+form {
+  margin-top: 15px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  animation: fadeIn 2s ease forwards;
+}
+
+input, select {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  flex: 1 1 150px;
+  transition: border-color 0.3s ease;
+}
+
+input:focus, select:focus {
+  border-color: #d2691e;
+  outline: none;
+}
+
+button {
+  background-color: #d2691e;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  flex: 0 0 auto;
+}
+
+button:hover {
+  background-color: #a0522d;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 0;
+  animation: fadeIn 2s ease forwards;
+}
+
+li {
+  margin-bottom: 8px;
+  font-size: 1rem;
+}
+
+input[type="checkbox"] {
+  margin-right: 8px;
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
