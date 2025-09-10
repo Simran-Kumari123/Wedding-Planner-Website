@@ -1,10 +1,17 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import './Planning.css';
 import TimelinePlanner from '../components/TimelinePlanner';
+import BudgetManager from '../components/BudgetManager';
+import GuestList from '../components/GuestList';
+import VendorDirectory from '../components/VendorDirectory';
+import WeddingChecklist from '../components/WeddingChecklist';
 
 function Planning() {
   const [selectedTool, setSelectedTool] = React.useState(null);
   const [showModal, setShowModal] = React.useState(false);
+
+  const navigate = useNavigate();
 
   const handleToolClick = (tool) => {
     setSelectedTool(tool);
@@ -12,7 +19,7 @@ function Planning() {
   };
 
   const handleStartPlanning = () => {
-    alert('Welcome to Wedding Planning! Choose a tool above to get started with your dream wedding planning journey.');
+    navigate('/planning');
   };
 
   const closeModal = () => {
@@ -110,11 +117,11 @@ function Planning() {
       <div className="planning-hero">
         <div className="hero-background">
           <div className="floating-elements">
-            <div className="floating-tool tool-1">📋</div>
-            <div className="floating-tool tool-2">💰</div>
-            <div className="floating-tool tool-3">👥</div>
-            <div className="floating-tool tool-4">⏰</div>
-            <div className="floating-tool tool-5">✅</div>
+            <div className="floating-tool tool-1">💗</div>
+            <div className="floating-tool tool-2">💗</div>
+            <div className="floating-tool tool-3">💗</div>
+            <div className="floating-tool tool-4">💗</div>
+            <div className="floating-tool tool-5">💗</div>
           </div>
         </div>
         <div className="container">
@@ -155,13 +162,13 @@ function Planning() {
                     <span className="user-count">{tool.users} users</span>
                     <span className={`status-badge status-${tool.status.toLowerCase()}`}>{tool.status}</span>
                   </div>
-                  <button 
-                    className="tool-btn" 
+                  <button
+                    className="tool-btn"
                     style={{ background: tool.color }}
                     onClick={() => handleToolClick(tool)}
                   >
-                    <span>Get Started</span>
-                    <i className="fas fa-arrow-right"></i>
+                    <span>Click to Open</span>
+                    <i className="fas fa-external-link-alt"></i>
                   </button>
                 </div>
               </div>
@@ -238,6 +245,19 @@ function Planning() {
               </div>
               {selectedTool.title === 'Timeline Planner' ? (
                 <TimelinePlanner />
+              ) : selectedTool.title === 'Budget Tracker' ? (
+                <BudgetManager />
+              ) : selectedTool.title === 'Guest List Manager' ? (
+                <GuestList />
+              ) : selectedTool.title === 'Vendor Directory' ? (
+                <VendorDirectory />
+              ) : selectedTool.title === 'Checklist Manager' ? (
+                <WeddingChecklist />
+              ) : selectedTool.title === 'Inspiration Board' ? (
+                <div className="inspiration-placeholder">
+                  <h4>🎨 Inspiration Board Coming Soon!</h4>
+                  <p>Collect and organize your wedding inspiration here.</p>
+                </div>
               ) : (
                 <>
                   <div className="modal-stats">
@@ -261,19 +281,19 @@ function Planning() {
               <button className="modal-btn secondary" onClick={closeModal}>
                 Maybe Later
               </button>
-              <button 
-                className="modal-btn primary" 
+              <button
+                className="modal-btn primary"
                 style={{ background: selectedTool.color }}
                 onClick={() => {
                   if (selectedTool.title === 'Timeline Planner') {
                     // Timeline Planner is already shown above
                     return;
                   }
-                  alert(`Starting ${selectedTool.title}! This feature will be available soon.`);
-                  closeModal();
+                  // Tool is already open in the modal above
+                  return;
                 }}
               >
-                {selectedTool.title === 'Timeline Planner' ? 'Using Timeline Planner' : `Start Using ${selectedTool.title}`}
+                {selectedTool.title === 'Timeline Planner' ? 'Timeline Planner Open' : `${selectedTool.title} Open`}
               </button>
             </div>
           </div>

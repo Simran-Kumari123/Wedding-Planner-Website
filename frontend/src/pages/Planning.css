@@ -1,5 +1,5 @@
 .planning-container {
-  background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+  background-color: #f9e6eb; /* light pink background as per user request */
   min-height: 100vh;
   position: relative;
   overflow: hidden;
@@ -51,6 +51,7 @@
 .floating-tool {
   position: absolute;
   font-size: 2.5rem;
+  color: #ffb6c1; /* light pink hearts */
   animation: floatTool 12s ease-in-out infinite;
   opacity: 0.7;
 }

@@ -1,5 +1,5 @@
 .home-container {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: #f9e6eb;
   min-height: 100vh;
   position: relative;
   overflow: hidden;
@@ -22,10 +22,8 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: 
-    radial-gradient(circle at 20% 80%, rgba(139, 11, 31, 0.4) 0%, transparent 50%),
-    radial-gradient(circle at 80% 20%, rgba(173, 216, 230, 0.4) 0%, transparent 50%),
-    radial-gradient(circle at 40% 40%, rgba(255, 218, 185, 0.3) 0%, transparent 50%);
+  background: #f9e6gb;
+    
   animation: backgroundShift 20s ease-in-out infinite;
 }
 
@@ -233,7 +231,7 @@
 }
 
 .countdown-card {
-  background: linear-gradient(135deg, #667eea, #764ba2);
+  background: linear-gradient(135deg, #2c3e50, #3498db);
   border-radius: 20px;
   padding: 2rem;
   color: white;

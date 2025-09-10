@@ -1,4 +1,4 @@
- import React from 'react';
+import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
@@ -7,12 +7,12 @@ import About from './pages/About';
 import Contact from './pages/Contact';
 import Blog from './pages/Blog';
 import Planning from './pages/Planning';
-import WeddingCountdown from './components/WeddingCountdown';
 import VendorDirectory from './components/VendorDirectory';
 import BudgetManager from './components/BudgetManager';
 import GuestList from './components/GuestList';
 import RSVPTracker from './components/RSVPTracker';
 import WeddingChecklist from './components/WeddingChecklist';
+import PhotoGallery from './components/PhotoGallery';
 function App() {
   return (
     <Router>

@@ -8,7 +8,7 @@ body {
 
 /* Hero Section Animations */
 .hero-section {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #502c4d 0%, #3498db 100%);
   animation: gradientShift 8s ease infinite;
   background-size: 400% 400%;
 }
@@ -71,12 +71,12 @@ body {
 }
 
 .btn-primary {
-  background: linear-gradient(45deg, #667eea, #764ba2);
+  background: linear-gradient(45deg, #2c3e50, #3498db);
   border: none;
 }
 
 .btn-primary:hover {
-  background: linear-gradient(45deg, #764ba2, #667eea);
+  background: linear-gradient(45deg, #3498db, #2c3e50);
   box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
 
@@ -206,17 +206,17 @@ footer {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(45deg, #667eea, #764ba2);
+  background: linear-gradient(45deg, #2c3e50, #3498db);
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(45deg, #764ba2, #667eea);
+  background: linear-gradient(45deg, #3498db, #2c3e50);
 }
 
 /* Text Animations */
 .text-gradient {
-  background: linear-gradient(45deg, #667eea, #764ba2);
+  background: linear-gradient(45deg, #2c3e50, #3498db);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
